@@ -1,0 +1,68 @@
+{
+  ConstraintSets: {
+    start: {
+      video: {
+        height: 100,
+        width: 200,
+        start: ['parent', 'start', 32],
+        bottom: ['parent', 'bottom', 32]
+      },
+      right_content: {
+        height: 'spread',
+        width: 'spread',
+        start: ['video', 'end', 0],
+        end: ['parent', 'end', 32],
+        top: ['video', 'top', 0],
+        bottom: ['video', 'bottom', 0],
+      },
+      bottom_content: {
+        width: 'spread',
+        height: 0,
+        start: ['parent', 'start', 32],
+        top: ['video', 'bottom', 0],
+        bottom: ['parent', 'bottom', 32],
+        end: ['parent', 'end', 32]
+      }
+    },
+    end: {
+      video: {
+        height: 300,
+        width: 'spread',
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+      },
+      right_content: {
+        height: 'spread',
+        width: 0,
+        start: ['video', 'end', 0],
+        end: ['parent', 'end', 32],
+        top: ['video', 'top', 0],
+        bottom: ['video', 'bottom', 0],
+      },
+      bottom_content: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start', 0],
+        top: ['video', 'bottom', 0],
+        bottom: ['parent', 'bottom', 0],
+        end: ['parent', 'end', 0]
+      }
+    }
+  },
+  Transitions: {
+    // Transition Named default (special name)
+    default: {
+      KeyFrames: {
+        KeyPositions: {},
+        KeyAttributes: [
+          {
+            target : ['bottom_content'],
+            frames: [0,40,100],
+            alpha: [0.0, 0.2, 1.0],
+          }
+        ],
+        KeyCycles: {},
+      }
+    }
+  }
+}
