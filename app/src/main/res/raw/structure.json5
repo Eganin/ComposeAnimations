@@ -1,0 +1,52 @@
+{
+  ConstraintSets: {
+    start: {
+      box: {
+        width: 100,
+        height: 100,
+        top: [
+          'parent',
+          'top',
+          0
+        ],
+        start: [
+          'parent',
+          'start',
+          0
+        ],
+        custom: {
+          radius: 0
+        }
+      }
+    },
+    end: {
+      box: {
+        width: 200,
+        height: 200,
+        bottom: [
+          'parent',
+          'bottom',
+          0
+        ],
+        end: [
+          'parent',
+          'end',
+          0
+        ],
+        custom: {
+          radius: 24
+        }
+      }
+    }
+  },
+  Transitions: {
+    // Transition Named default (special name)
+    default: {
+      KeyFrames: {
+        KeyPositions: {},
+        KeyAttributes: {},
+        KeyCycles: {},
+      }
+    }
+  }
+}
