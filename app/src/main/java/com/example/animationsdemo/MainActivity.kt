@@ -14,7 +14,6 @@ import androidx.constraintlayout.compose.ExperimentalMotionApi
 import com.example.animationsdemo.ui.theme.AnimationsDemoTheme
 
 class MainActivity : ComponentActivity() {
-    @OptIn(ExperimentalMotionApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -24,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    MotionLayoutYoutube()
+                    RotationExample()
                 }
             }
         }
